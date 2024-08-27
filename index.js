@@ -1,0 +1,1 @@
+console.log("Holassss"); /*Console.log es un método*/ 

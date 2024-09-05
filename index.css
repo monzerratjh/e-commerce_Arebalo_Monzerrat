@@ -2,15 +2,6 @@
 body {
     background-color: rgba(248,249,250,1);
 }
-.mainBar {
-    margin-bottom: 15px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
 
 .NavBarFunctions {
     margin: 0;
@@ -18,8 +9,6 @@ body {
     flex-wrap: nowrap;
 }
 
-.cartas {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+h1 {
+    font-size: 35px;
 }

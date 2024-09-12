@@ -7,8 +7,28 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: nowrap;
+
+    /*background-color: rgb(46, 50, 49);*/
 }
 
 h1 {
     font-size: 35px;
+    margin: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    margin: 10px;
+}
+
+.card:hover {
+    transform:scaleX(0.98) scaleY(0.98);
+    color: white;
+    background-color: rgb(46, 50, 49);
 }

@@ -3,14 +3,6 @@ body {
     background-color: rgba(248,249,250,1);
 }
 
-.NavBarFunctions {
-    margin: 0;
-    display: flex;
-    flex-wrap: nowrap;
-
-    /*background-color: rgb(46, 50, 49);*/
-}
-
 h1 {
     font-size: 35px;
     margin: 15px;

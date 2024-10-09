@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
+
+p {
+    color:black;
+    font-size: 17px;
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+    /*width: 50%;
+    height: auto;*/
+}
+
+.producto {
+    padding: 20px;
+    margin: 20px;
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px;
+    color:grey;
+}

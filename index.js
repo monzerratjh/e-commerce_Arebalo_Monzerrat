@@ -27,3 +27,4 @@ let botones = document.querySelectorAll('.btn-primary'); //al tener dos tipos de
 for (let i = 0; i < botones.length; i++) { //en este caso ".btn-primary" porque si ponemos solo la clase btn, se cambia el de la navbar.
     botones[i].innerText = 'Ver más';
 }
+

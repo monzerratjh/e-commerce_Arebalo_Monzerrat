@@ -2,11 +2,11 @@
 const data = [
   {
       id: 1,
-      titulo: "Producto 1",
-      detalle: "Descripción del producto 1.",
+      titulo: "Ferrari F80",
+      detalle: "El nuevo supercar del Cavallino Rampante",
       precio: 199.99,
       stock: 10,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/1.jpg",
+      imagen: "https://cdn.ferrari.com/cms/network/media/img/resize/670f682d57a595000f7361a6-ferrari-f80-dynamics-cover-new-desk?width=1440&height=900",
       category: "ferrari"
   },
   {
@@ -20,20 +20,20 @@ const data = [
   },
   {
       id: 3,
-      titulo: "Producto 3",
-      detalle: "Descripción del producto 3.",
+      titulo: "Honda NSX Type R",
+      detalle: "La fusión perfecta de la ingeniería japonesa y la pura emoción de la pista.",
       precio: 149.99,
       stock: 15,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/3.jpg",
+      imagen: "https://i.ytimg.com/vi/4qQCSaAGgLA/maxresdefault.jpg",
       category: "honda"
   },
   {
       id: 4,
-      titulo: "Producto 4",
-      detalle: "Descripción del producto 4.",
+      titulo: "Ferrari F40",
+      detalle: "Un legado imperecedero.",
       precio: 149.99,
       stock: 15,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/4.jpg",
+      imagen: "https://cdn.ferrari.com/cms/network/media/img/resize/5de79b73b6285a70bc7d046f-ferrari-f40-1987-design-focus-4?width=1920&height=1080",
       category: "ferrari"
   },
   {
@@ -47,20 +47,20 @@ const data = [
   },
   {
       id: 6,
-      titulo: "Producto 6",
-      detalle: "Descripción del producto 6.",
+      titulo: "Honda S2000",
+      detalle: "Un clásico de los 2000.",
       precio: 149.99,
       stock: 15,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/6.jpg",
+      imagen: "https://bringatrailer.com/wp-content/uploads/2023/12/2007_honda_s2000_2007_honda_s2000_3071737a-36ff-488d-887d-9542f2c9ba0c-hq0tor-19568-01739.jpg",
       category: "honda"
   },
   {
       id: 7,
-      titulo: "Producto 7",
-      detalle: "Descripción del producto 7.",
+      titulo: "LaFerrari",
+      detalle: "El proyecto ferrari más ambicioso.",
       precio: 149.99,
       stock: 15,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/7.jpg",
+      imagen: "https://cdn.ferrari.com/cms/network/media/img/resize/5d95ce7de4a573784c178945-ferrari-laferrari-2013-chassis-focuson-desktop?width=1920&height=1080",
       category: "ferrari"
   },
   {
@@ -74,11 +74,11 @@ const data = [
   },
   {
       id: 9,
-      titulo: "Producto 9",
-      detalle: "Descripción del producto 9.",
+      titulo: "Honda Acura NSX",
+      detalle: 'Conocido como el "Anti Ferrari"',
       precio: 149.99,
       stock: 15,
-      imagen: "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/9.jpg",
+      imagen: "https://bringatrailer.com/wp-content/uploads/2016/11/DSC_0171.jpg?fit=1613%2C1080",
       category: "honda"
   }
 ];
@@ -89,17 +89,20 @@ function displayProducts(products) {
     productList.innerHTML = ''; // Limpiar la lista antes de añadir nuevos productos
     products.forEach(product => {
       productList.innerHTML += `
-        <div class="col-4">
-            <div class="card">
-                <img src="${product.imagen}" class="card-img-top" alt="${product.titulo}">
-                <div class="card-body">
-                    <h5 class="card-title">${product.titulo}</h5>
-                    <p class="card-text">${product.detalle}</p>
-                    <p>Precio: $${product.precio.toFixed(2)}</p>
-                    <a href="./producto.html?prod=${product.id}" class="btn btn-primary">Ver más</a>
-                </div>
-            </div>
+        <div class="card">
+
+          <div class="image-box">
+            <img src="${product.imagen}" alt="${product.titulo}">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">${product.titulo}</h5>
+              <p class="card-text">${product.detalle}</p>
+              <p>Precio: $${product.precio.toFixed(2)}</p>
+              <a href="./producto.html?prod=${product.id}" class="btn btn-primary">Ver más</a>
+          </div>
         </div>
+        
       `;
     });
   }

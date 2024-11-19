@@ -32,12 +32,27 @@ let menu = `
             <ul class="navbar-nav">
                 ${menuCat.join('')}
             </ul>
+              <ul class="navbar-nav ms-auto"> <!-- Alinea a la derecha -->
+                ${
+                  localStorage.getItem("email")
+                  ? `<li class="nav-item me-2"><a href="#" class="nav-link">${localStorage.getItem("email")}</a></li>
+                     <li class="nav-item me-2"><span>|</span></li> 
+                     <li class="nav-item" onclick="closeSession()"><a href="#" id="logout" class="nav-link">Cerrar Sesión</a></li>
+                     <span>|</span>
+                     <li class="nav-item"> <a style="text-decoration: none; color: black;" href="./cart.html"><img height="25" src="./assets/cart.png" alt="Comprar"/> <b>${localStorage.getItem("quantity")}</b> </a>
+                     <span>|</span>` 
+                  : `<li class="nav-item"><a href="./login.html" class="nav-link">Iniciar Sesión</a></li>`
+                }
+            </ul>
         </div>
     </div>
 </nav>
 `;
 
-/*console.log("navbar.js cargado correctamente");*/
+function closeSession () {
+  localStorage.clear();
+  location.href = "./index.html"
+}
 
 // Lo insertamos al DOM
 document.querySelector('header').innerHTML = menu;
